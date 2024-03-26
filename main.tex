@@ -1,360 +1,185 @@
-\documentclass[letterpaper,11pt]{article}
-\usepackage{tabularx}
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{ragged2e}
-\usepackage[english]{babel}
-
-%EXTRA
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{natbib}
+\usepackage{amssymb, amsmath}
+\usepackage[colorlinks=True]{hyperref}
+\hypersetup{urlcolor=blue}
+\usepackage{array}
 \usepackage{fontawesome}
+\usepackage{comment}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{ #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubheadingTwo}[2]{
-  \vspace{-1pt}
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Define new column types for the tables
+\newcolumntype{L}{>{\raggedleft}p{0.18\textwidth}}
+\newcolumntype{R}{p{0.76\textwidth}}
+\newcolumntype{l}{>{\raggedleft}p{0.25\textwidth}}
+\newcolumntype{r}{p{0.71\textwidth}}
 
 \begin{document}
 
-%----------HEADING-----------------
+\small % Reduce font size for the whole document
+
 \begin{center}
-\textbf{\Huge Jiten Dhandha}\\
+\huge
+\textbf{Jiten Dhandha} \\
+\normalsize
 PhD student - University of Cambridge
 \end{center}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \faEnvelope~~\href{mailto:jvd29@cam.ac.uk}{jvd29@cam.ac.uk} &  \faGlobe~~\href{https://jitendhandha.com}{jitendhandha.com}\\
-  \faPhone~~+44 (0)7442793684 & \faGithub~~\href{https://github.com/jitendhandha}{github.com/jitendhandha}\\
-\end{tabular*}
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-  
-    \resumeSubheading
-      {Institute of Astronomy, University of Cambridge}{Cambridge, UK}
-      {PhD in Astronomy, supervised by Dr. Anastasia Fialkov and Dr. Eloy de Lera Acedo}{Oct. 2022 -- Present}
-        \resumeItemListStart
-            \resumeItem{Funded by:}{\href{https://boustany-foundation.org/scholarship-programmes/astronomy-phd-cambridge/}{Boustany Astronomy Scholarship} \& \href{https://www.cambridgetrust.org/}{Isaac Newton Studentship}}
-        \resumeItemListEnd
-        
-    \resumeSubheading
-      {University of Manchester}{Manchester, UK}
-      {MPhys (Hons) Physics with Astrophysics}{Sep. 2018 -- Jun. 2022}
-        \resumeItemListStart
-            \resumeItem{Course performance:}
-                {Average of 82.2\% (First Class).} %Should rank be mentioned? :/
-            %\resumeItem{Relevant coursework:}
-            %    {Quantum Physics and Relativity (PHYS10121), Introduction to Astrophysics (PHYS10191), Advanced Dynamics (PHYS10672), Galaxies (PHYS20491), Astrophysical Processes (PHYS20692)}
-            \resumeItem{Awards:}
-                {Tessella Prize for Software (Jul. 2022), BP Achievement Award (Apr. 2019), IOP PLANCKS Physics competition 7th place (Feb. 2019), Physics Success Scholarship (Dec. 2018)}{}
-        \resumeItemListEnd
-    
-%    \resumeSubheading
-%      {DPS - Modern Indian School}{Doha, Qatar}
-%      {All India Senior School Certificate Examination}{2016 - 2018}
-%      \resumeItemListStart
-%        \resumeItem {Performance:}
-%        {Average of 95.2\% in AISSCE  (A-level equivalent) examination.}
-%        \resumeItem {Awards:}
-%        {Winning team of Pi Day Maths Competition 2017 by Carnegie Mellon University in Qatar}
-%       \resumeItemListEnd
-  
-  \resumeSubHeadingListEnd
+\begin{minipage}[ht]{0.6\linewidth}
+	\faEnvelope~~\textbf{Email}: jvd29@cam.ac.uk / jitendhandha@gmail.com\\
+	\faGithub~~\textbf{Github:} \href{https://github.com/JitenDhandha}{github.com/JitenDhandha}\\
+	\faGlobe~~\textbf{Website:} \href{https://jitendhandha.com}{jitendhandha.com} \\
+  \faPhone~~\textbf{Mobile}: +44(0)7729396746 \\
+\end{minipage}
+\begin{minipage}[ht]{0.3\linewidth}
+	\begin{flushright}
+	\end{flushright}
+\end{minipage}
 
-%-----------EXPERIENCE-----------------%
-\section{Research experience}
-  \resumeSubHeadingListStart
-  
-      \resumeSubheading
-      {Connecting turbulence to massive star formation}{Manchester, UK}
-      {4th year MPhys project under Dr. Rowan Smith}{Sep. 2021 -- Present}
+\section*{Employment}
+\begin{tabular}{L!{\vrule}R}
+    Jun. 2021 - Aug. 2021 & \textbf{Summer research project}, University of Manchester. Modelling the cosmological 21-cm signal in \href{https://bitbucket.org/Jacetoto/recfast-.vx/src/Recfast_JD_21cm_modelling/}{\texttt{Recfast++}} and \texttt{CosmoTherm} to study their synergy with CMB spectral distortions. Supervised by Prof. Jens Chluba. \\
+    Jun. 2020 - Sep. 2020 & \textbf{Summer research project}, University of Manchester. Testing and debugging \texttt{LOFAR-VLBI} calibration/imaging pipeline for gravitational lenses. Supervised by Dr. Neal Jackson.\\
+    Jul. 2019 - Sep. 2019 & \textbf{Summer Intern Programme}, British Petroleum / University of Manchester. Simulating mitigation techniques for sulphate reducing bacteria responsible for fouling crude oil. Supervised by Dr. Thomas Waigh. \\
+\end{tabular}
 
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont \textbf{Project premise}: using numerical simulations of turbulence in molecular clouds to investigate the prevalence of filamentary hubs, and their link to massive star formation.}{}
-        \resumeItem
-          {\normalfont Gained knowledge of the theory of turbulence and filament formation in collapsing parsec-scale molecular clouds. Also gained experience working with the magnetohydrodynamical simulation code \texttt{AREPO}, and filament identification code \texttt{DisPerSE}, on the DiRAC supercomputing facility.}{}
-        \resumeItem
-          {\normalfont Studied the effect on different initial turbulent modes and Virial ratios in a suite of 15 simulations by analyzing a variety of properties: probability density functions; filament lengths, masses, line densities; mass statistics of dense, star-forming regions; and their evolution.}{}
-        \resumeItem
-          {\normalfont Developed \href{https://fiesta-astro.readthedocs.io/}{\texttt{fiesta}}, an astrophysical toolkit for studying filamentary networks in density fields defined on unstructured meshes.}{}
-        %\resumeItem
-          %{\normalfont Gained experience working with the magnetohydrodynamical simulation code AREPO, and filament identification code DisPerSE, on the DiRAC supercomputing facility.}{}
-      \resumeItemListEnd
+\section*{Education}
+\begin{tabular}{L!{\vrule}R}
+	2022 - \textit{present} & \textbf{PhD in Astronomy}, Institute of Astronomy, University of Cambridge. Supervised by Prof. Anastasia Fialkov and Dr. Eloy de Lera Acedo. \\
+	2018 - 2022 & \textbf{MPhys. Physics with Astrophysics, First Class}, University of Manchester. Project involved simulating turbulent molecular clouds in ISM and studying filament and star formation. Performed with Zoe Faes and supervised by Dr. Rowan Smith. \\
+	2016 - 2018 & \textbf{All India Senior School Certificate Examination}, DPS - Modern Indian School, Doha, Qatar. Average of 95.2\% in AISSCE (A-level equivalent) examination.
+\end{tabular}
 
-      \resumeSubheading
-      {Modelling the global 21-cm cosmological signal}{Manchester, UK}
-      {Research assistant under Prof. Jens Chluba}{Jun. 2021 -- Aug. 2021}
+\section*{Publications}
 
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont \textbf{Project premise}: recreating the latest models for the hydrogen 21-cm cosmological emission/absorption signals through a large range of redshifts as a module in the recombination code \texttt{Recfast++} and thermalization code \texttt{CosmoTherm} (both written in C++).}{}
-        \resumeItem
-          {\normalfont Gained knowledge of the atomic and optical physics involved in the recombination, reionization and the dark age epochs of the universe, as well as the evolution of the global 21-cm signal during them.}{}
-        \resumeItem
-          {\normalfont Performed an extensive literature review on the topic, comparing different models and improvements made to them over time.}{}
-        \resumeItem
-          {\normalfont Implemented a \href{https://bitbucket.org/Jacetoto/recfast-.vx/src/Recfast_JD_21cm_modelling/}{parametric model} for reionization and evolution of the 21-cm spin temperature and differential brightness temperature consistent with latest research.}{}
-        \resumeItem
-          {\normalfont As an addition, developed a \href{https://bitbucket.org/Jacetoto/recfast-.vx/src/Python-wrapper/}{Python package} wrapping the \texttt{Recfast++} code using \texttt{Pybind11}, and wrote Jupyter notebooks to document and demonstrate its usage.}{}
-      \resumeItemListEnd
-      
-\begin{comment}  
-      \resumeSubheading
-      {Pulsar timing experiment}{Manchester, UK}
-      {3rd year undergraduate lab experiment}{Mar. 2021 - May 2021}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Gained knowledge of the physics involved in the formation, mechanism and turn-off of pulsars.}{}
-        \resumeItem
-          {\normalfont Gained experience remotely operating the 42ft telescope at JBCA to take pulsar observations and found distances to them using pulse de-dispersion techniques. }{}
-        \resumeItem
-          {\normalfont Extracted the pulse period of several pulsars in the archived data of the 72m Lovell telescope at JBCA, using Fourier analysis techniques and novel peak-finding algorithms.}{}
-      \resumeItemListEnd
+\subsubsection*{First Author}
 
-      \resumeSubheading
-      {Optical tweezers experiment}{Manchester, UK}
-      {3rd year undergraduate lab experiment}{Oct. 2020 -- Nov. 2020}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Gained experience using a microscope and class 3B laser, for the purpose of optical tweezing, as well as making microscope samples for observation.}{}
-        \resumeItem
-          {\normalfont Investigated the viscosity of different liquids by studying the effects of piconewton-scale forces on the Brownian motion of silica and polystyrene microbeads in them. Also found the spring constant of the laser as a function of its input power.}{}
-        \resumeItem
-          {\normalfont Experimented with several particle tracking algorithms, including machine-learning based trackers, to track the microbeads, and advanced statistical techniques like kernel density estimation for data analysis.}{}
-      \resumeItemListEnd
-    \end{comment}  
+\begin{tabular}{L!{\vrule}R}
 
-      \resumeSubheading
-      {Imaging of gravitational lens MG0751+2716 }{Manchester, UK}
-      {Research assistant under Dr. Neal Jackson, part of LOFAR-ASTRON group}{Jun. 2020 -- Sep. 2020}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont \textbf{Project premise}: testing and debugging the \texttt{LOFAR-VLBI} calibration and imaging pipeline (written in C++ and Python) using an observation of the gravitational lens system MG0751+2716 from the LOFAR international baseline, and producing a high-resolution image as a result for \href{https://doi.org/10.1051/0004-6361/202141227}{publication}.}{}
-        \resumeItem
-          {\normalfont Gained knowledge of the physics behind the gravitational lensing phenomenon, and the optics involved in long baseline radio interferometry, from taking data to rigorously `cleaning' it for analysis.}{}
-        \resumeItem
-          {\normalfont         
-          Gained experience working with a Linux-system and batch processing on a remote computer cluster, specifically the University of Hertfordshire high performance cluster.}{}
-        \resumeItem
-          {\normalfont Gained experience working with complex data structures used for storing large astronomical data; as well as interpreting the physical and computational reasons for the results at different stages of the pipeline.}{}
-        \resumeItem
-          {\normalfont Press coverage of the LOFAR collaboration, which this project was a part of: \href{https://www.astron.nl/most-detailed-ever-images-of-galaxies-revealed-using-lofar }{ASTRON}, \href{https://www.bbc.co.uk/news/science-environment-57998940}{BBC}.}{}
+    July 2023 & \textbf{J. Dhandha}, Z. Faes, R. J. Smith. \href{https://arxiv.org/abs/2307.12428}{\textit{Decaying turbulence in molecular clouds: how does it affect filament networks and star formation?}}, arXiv:astro-ph.GA, arXiv:2307.12428. \\
 
-      \resumeItemListEnd
-      
+\end{tabular}
+
+\subsubsection*{Contributing Author}
+
+\begin{tabular}{L!{\vrule}R}
+
+    March 2024 & A. Fialkov, T. Gessey-Jones, \textbf{J. Dhandha}. \href{https://doi.org/10.1098/rsta.2023.0068}{\textit{Cosmic mysteries and the hydrogen 21-cm line: bridging the gap with lunar observations}}, Philosophical Transactions of the Royal Society A, Volume 382, Issue 2271, arXiv:2311.05366. \\
+
+    February 2024 & O. S. D. O'Hara, F. Dulwich, E. de Lera Acedo, \textbf{J. Dhandha}, T. Gessey-Jones, D. Anstey, A. Fialkov. \href{https://arxiv.org/abs/2402.04008}{\textit{Understanding spectral artefacts in SKA-LOW 21-cm cosmology experiments: the impact of cable reflections}}, arXiv:astro-ph.CO, arXiv:2402.04008. \\
+
+	  September 2022 & S. K. Acharya, \textbf{J. Dhandha}, J. Chluba. \href{https://doi.org/10.1093/mnras/stac2739}{\textit{Can accreting primordial black holes explain the excess radio background?}}, Monthly Notices of the Royal Astronomy Societ, Volume 517, Issue 2, Pages 2454-2461, arXiv:2208.03816. \\
+
+	  February 2022 & S. Badole, D. Venkattu, N. Jackson, S. Wallace, \textbf{J. Dhandha}, P. Hartley, C. Riddell-Rovira, A. Townsend, L. K. Morabito, J. P. McKean. \href{https://doi.org/10.1051/0004-6361/202141227}{\textit{High-resolution imaging with the International LOFAR Telescope: Observations of the gravitational lenses MG 0751+2716 and CLASS B1600+434}}, Astronomy \& Astrophysics, Volume 658, Issue 11, arXiv:2108.07293. \\
+
+\end{tabular}
+
+\section*{Talks}
+\subsubsection*{Conference and Workshop talks}
+\begin{tabular}{L!{\vrule}R}
+
+    February 2024 & \textit{Synergies between 21-cm experiments and JWST observations}, Science with the 21-cm line, KICC, University of Cambridge. \\
+
+    September 2023 & \textit{Bringing 21-cm simulations to the JWST era}, REACH Annual Meeting, University of Malta. \\
+
+    September 2023 & \textit{FIlamEntary STructure Analysis (fiesta)}, AREPO-ISM workshop, University of Manchester. \\
+
+    October 2022 & \textit{Can accreting primordial black holes explain the excess radio background?}, PDAT Laboratory, K. N. Toosi University of Technology (virtual webinar). \\
+
+\end{tabular}
+
+\subsubsection*{Outreach talks}
+\begin{tabular}{L!{\vrule}R}
+
+  October 2022 & \textit{Like beads on a string... Where do massive stars in our Universe come from? A brief look into studying our cosmos}, Pembroke Papers, Pembroke College, University of Cambridge. \\
+
+\end{tabular}
+
+\section*{Grants and awards}
+
+\begin{tabular}{L!{\vrule}R}
+
+    July 2022 & \textbf{Tessella Prize for Software} (£125), for outstanding work implementing software in Mphys project. \\
+    April 2019 & \textbf{BP Achievement Award} (£1000), for best essay on petrophysical logging tools. \\
+    December 2018 & \textbf{Physics Success Scholarship} (£2000), for academic excellence in physics and maths.\\
+
+\end{tabular}
+
 \begin{comment}
-    \resumeSubheading
-      {Simulating solutions to oil reservoir souring}{Manchester, UK}
-      {Research intern, Summer Intern Programme 2019, British Petroleum}{Jul. 2019 - Sep. 2019}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont \textbf{Project premise}: simulating sulphate reducing bacteria (SRBs), responsible for fouling crude oil in reservoirs, on the agent-based model code \texttt{iDynoMiCS} (written in Java) and testing different techniques to mitigate them.}{}
-        \resumeItem
-          {\normalfont Gained knowledge of the biophysics involved in modelling bacteria, specifically the simulation of bacterial biofilms in a solution using hard-sphere agent-based models.}{}
-        \resumeItem
-          {\normalfont Studied the effect of bio-competitive exclusion on growth of SRBs by introducing competing bacteria (NRBs), with realistic substrate composition and growth models, in the simulation.}{}
-        \resumeItem
-          {\normalfont Designed a method to implement surface topography in the simulation model, through stationary non-interacting spheres called `bricks', and studied the effects of surface roughness on substrate consumption and growth inhibition of SRBs.}{}
-      \resumeItemListEnd
+\section*{Posters Presentations}
+
+\begin{tabular}{L!{\vrule}R}
+	March 2021 & \href{https://github.com/htjb/Talks/blob/master/Posters/SKA_globalemu_March_2021/globalemu.pdf}{\textit{globalemu: A novel and robust approach for emulating the sky averaged 21-cm signal from the cosmic dawn and epoch of reionization}}, A Precursor View of the SKA Sky, Virtual Conference\\
+	December 2019 & \href{https://drive.google.com/file/d/1dvgumyu4cXxXqoYxikU3DKOa4u_gpGzn/view}{\textit{REACH: Radio Experiment for the Analysis of Cosmic Hydrogen}}, Science At Low Frequencies VI, Arizona State University \\
+	November 2019 & \href{https://github.com/htjb/Talks/blob/master/Posters/Cav_Graduate_Conf_REACH_Nov_2019/REACH_poster.pdf}{\textit{REACH: Radio Experiment for the Analysis of Cosmic Hydrogen}}, Cavendish Graduate Conference, University of Cambridge
+\end{tabular}
 \end{comment}
 
-\resumeSubHeadingListEnd
-    
+\section*{Conference organisation}
 
-%--------SKILLS------------
-\section{Skills}
-\begin{itemize}[leftmargin=*]
-\item \textbf{Software experience} \vspace{-5pt}
-\resumeItemListStart
-\resumeItem
-{\normalfont Proficient in the general-purpose programming languages Python and C++. Competent in Java and the numerical computing language MATLAB. Fluent with markup languages LaTeX and Wikitext.}{}
-\resumeItem
-{\normalfont Experience with advanced data-analysis methods and data-fitting on Python; for example, see \href{https://github.com/JitenDhandha/CFit}{\texttt{CFit}}, an open-source curve-fitting tool with a GUI.}{}
-\resumeItem
-{\normalfont Experience with: working on Linux systems; batch processing on remote clusters; automation using shell scripts; Git development; working with coding pipelines; GUI creation and C++ interfacing in Python; and Python development using virtual-environment setups.}{}
-\resumeItemListEnd
-\end{itemize}
+\begin{tabular}{L!{\vrule}R}
+  February 2024  &\href{https://www.kicc.cam.ac.uk/events/kavli-science-themed-meetings/science-21-cm-hydrogen-line}{Kavli Science Focus: Science with the 21-cm line}, member of Organising Committee and session chair, KICC, University of Cambrdige. \\
+\end{tabular}
+\section*{Teaching responsibilities}
 
-\begin{itemize}[leftmargin=*]
-\item \textbf{Hardware experience} \vspace{-5pt}
-\resumeItemListStart
-\resumeItem
-{\normalfont Experience with general undergraduate laboratory equipment such as: circuit components, oscilloscopes and digital controller systems; lenses, light sources, microscopes and other optical devices; and various other miscellaneous equipment like hot plates and chemicals. }{}
-\resumeItem
-{\normalfont Experience with some special equipment such as: remote control of the 7m telescope at JBCA for galactic hydrogen measurements; remote control of the 42ft telescope at JBCA for pulsar observations; low radioactive sources for gamma-ray spectroscopy; and class 3B laser for optical tweezing.}{}
-\resumeItemListEnd
-\end{itemize}
+\begin{tabular}{L!{\vrule}R}
 
-%--------PUBLICATIONS------------
-\section{Publications}
-\begin{itemize}[leftmargin=*]
-\item \textbf{Peer-reviewed} \vspace{-5pt}
-\resumeItemListStart
-\resumeItem
-{\normalfont Fialkov, A., Gessey-Jones, T., \textbf{Dhandha, J}, 2024. Cosmic mysteries and the hydrogen 21-cm line: bridging the gap with lunar observations. \textit{Philosophical Transactions of the Royal Society A} \textbf{382}(2271). \href{https://doi.org/10.1098/rsta.2023.0068}{doi:10.1098/rsta.2023.0068}}{}
-\resumeItem
-{\normalfont Acharya, S.K., \textbf{Dhandha, J.}, Chluba, J., 2022. Can accreting primordial black holes explain the excess radio background? \textit{Monthly Notices of the Royal Astronomical Society} \textbf{517}(2), 2454–2461. \href{https://doi.org/10.1093/mnras/stac2739}{doi:10.1093/mnras/stac273}}{}
-\resumeItem
-{\normalfont Badole, S., Venkattu, D., Jackson, N., Wallace, S., \textbf{Dhandha, J}, et al., 2022. High-resolution imaging with the International LOFAR Telescope: Observations of the gravitational lenses MG 0751+2716 and CLASS B1600+434. \textit{Astronomy \& Astrophysics} \textbf{658}, A7. \href{https://doi.org/10.1051/0004-6361/202141227}{doi:10.1051/0004-6361/202141227}}{}
-\resumeItemListEnd
-\end{itemize}
+	Oct. 2023 - \textit{present} & \textbf{Co-Supervision} of Rachel Incley (Masters student) with Prof. Anastasia Fialkov. Working on comparison of Epoch of Reionization in simulation codes \texttt{21cmSPACE} and \texttt{C2-Ray}. \\
+  Feb. 2023 - Mar. 2023 & \textbf{Demonstration of Part IA Scientific Computing} for 22 hours, University of Cambridge.\\
+
+\end{tabular}
+
+\section*{Software}
+
+\begin{tabular}{L!{\vrule}R}
+	\href{https://github.com/JitenDhandha/CFit}{\texttt{CFit}} & Main author and maintainer: Smart curve fitting tool using method of least squares in Python.\\
+	\href{https://fiesta-astro.readthedocs.io}{\texttt{fiesta}} & Main author and maintainer: Toolkit for analyzing filament networks and density field meshes. \\
+	\href{https://github.com/JitenDhandha/luminobs}{\texttt{luminobs}} & Main author and maintainer: Compendium of high-redshift galaxy UVLF observations.\\
+\end{tabular}
+
+\section*{In the media}
+
+\begin{tabular}{L!{\vrule}R}
+	August 2021 & \href{https://www.astron.nl/most-detailed-ever-images-of-galaxies-revealed-using-lofar }{Most detailed-ever images of galaxies revealed using LOFAR}. Press release for LOFAR observations from ASTRON. \\
+	August 2021 & \href{https://www.bbc.co.uk/news/science-environment-57998940}{Astronomers develop novel way to ‘see’ first stars through fog of early Universe}. Press release for LOFAR observations from BBC. \\
+\end{tabular}
+
+\section*{Extracurricular activities}
+\begin{tabular}{L!{\vrule}R}
+
+  May 2023 - \textit{present} & \textbf{Inclusion and Fairness} committee member, Institute of Astronomy, University of Cambridge. \\
+
+  Jul. 2023 - \textit{present} & \textbf{Graduate Parlour}, Ethnic Minorities officer, Pembroke College, University of Cambridge. \\
+
+  Oct. 2022 - \textit{present} & \textbf{Postgraduate Forum} representative, Institute of Astronomy, University of Cambridge. \\
+
+  Oct. 2022 - Apr. 2023 & \textbf{Pembroke Papers} committee memeber, Pembroke College, University of Cambridge. \\
+
+  Sep. 2021 - Jul. 2022 & \textbf{Student Representative} representing astronomy/astrophysics, University of Manchester. \\
+
+  Jul. 2020 - Jul. 2022 & \textbf{Touch Rugby Society}, Inclusion officer and COVID-19 safety officer, University of Manchester. \\
+
+	Sep. 2019 - Jun. 2020 & \textbf{Peer-Assisted Study Session} leader, Peer Support Scheme, University of Manchester. \\
+
+	Nov. 2016 - \textit{present} & \textbf{English Wikipedia}, volunteer editor. \\
+\end{tabular}
+
+\section*{Skills}
+
+\begin{tabular}{L!{\vrule}R}
+	Programming & \textbf{Proficient}: Python, MATLAB, \textbf{Experienced}: C++, Java\\
+	Markup & \textbf{Experienced}: LaTeX, Wikitext, \textbf{Intermediate}:  HTML, CSS, reStructuredText, Markdown \\
+	Languages & \textbf{Proficient}: English, Hindi, \textbf{Intermediate}: Gujarati
+\end{tabular}
+
+%\section*{References}
+
+%\textbf{Dr Eloy de Lera Acedo}, PhD Supervisor, Head of Cavendish Radio Cosmology and Principle Investigator, Cavendish Astrophysics, University of Cambridge. \textbf{Email:}ed330@cam.ac.uk\\
+%\\
+%\textbf{Dr Will Handley}, PhD Supervisor, Royal Society University Research Fellow, Cavendish Astrophysics, University of Cambridge. \textbf{Email:} wh260@cam.ac.uk\\
+%\\
+%\textbf{Dr Anastasia Fialkov}, PhD Supervisor, Royal Society University Research Fellow, Institute of Astronomy, University of Cambridge. \textbf{Email:} anastasia.fialkov@gmail.com \\
 
 
-\begin{itemize}[leftmargin=*]
-\item \textbf{Pre-prints} \vspace{-5pt}
-\resumeItemListStart
-\resumeItem
-{\normalfont O'Hara, O. S. D., Dulwich, F., de Lera Acedo, E., \textbf{Dhandha, J.}, et al., 2024.  Understanding spectral artefacts in SKA-LOW 21-cm cosmology experiments: the impact of cable reflections. \textit{arXiv:astro-ph.CO}. \href{https://arxiv.org/abs/2402.04008}{arXiv:2402.04008}}{}
-\resumeItem
-{\normalfont \textbf{Dhandha, J.}, Faes, Z., Smith, R. J., 2023.  Decaying turbulence in molecular clouds: how does it affect filament networks and star formation? \textit{arXiv:astro-ph.GA}. \href{https://arxiv.org/abs/2307.12428}{arXiv:2307.12428}}{}
-\resumeItemListEnd
-\end{itemize}
-
-%--------TALKS------------
-\section{Talks}
-\begin{itemize}[leftmargin=*]
-\item \textbf{Academic} \vspace{-5pt}
-\resumeItemListStart
-\resumeItem
-{\normalfont ``Synergies between 21-cm experiments and JWST observations'' \textit{Kavli Institute for Cosmology, Cambridge}. Kavli Science Focus meeting: Science with the 21-cm line. 07 February 2024.}{}
-\resumeItem
-{\normalfont ``Bringing 21-cm simulations to the JWST era'' \textit{L-Università ta' Malta}. REACH collaboration annual meeting talk. 26 September 2023.}{}
-\resumeItem
-{\normalfont ``FIlamEntary STructure Analysis (\texttt{fiesta})'' \textit{University of Manchester}. AREPO-ISM workshop interactive talk. 13 September 2023.}{}
-\resumeItem
-{\normalfont ``Like beads on a string... Where do massive stars in our Universe come from? A brief look into studying our cosmos.'' \textit{Pembroke Papers, Pembroke College, University of Cambridge}. In-person outreach-level talk. 27 October 2022.}{}
-\resumeItem
-{\normalfont ``Can accreting primordial black holes explain the excess radio background?'' \textit{PDAT Laboratory, K. N. Toosi University of Technology}. Virtual webinar. 17 October 2022.}{}
-\resumeItemListEnd
-\end{itemize}
-%\begin{itemize}[leftmargin=*]
-%\item \textbf{Outreach} \vspace{-5pt}
-%\resumeItemListStart
-%\resumeItem
-%{\normalfont }{}
-%\resumeItemListEnd
-%\end{itemize}
-
-%-----------Extracurricular Activity-----------------
-\section{Extracurricular Activity}
-  \resumeSubHeadingListStart
-    
-    \resumeSubheading
-      {Student Representative body at UoM}{Manchester, UK}
-      {Student representative \& astronomy/astrophysics representative}{Sep. 2021 -- Jul. 2022}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Helped gather feedback from the student body regarding teaching and course structures for various subjects and presented them to the lecturers at the bi-semester Teaching Review Meetings (TRMs).}{}
-        \resumeItem
-          {\normalfont Spear-headed the collation of critical feedback on University's handling of COVID-19 risks for the return to offline assessments in January 2022, including communication, risk mitigation and response to student concerns.}{}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {University of Manchester Touch Rugby Society}{Manchester, UK}
-      {Inclusion officer}{Jul. 2020 -- Jul. 2022}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Helped ensure that the society was accessible and welcoming to new and experienced players alike, through both online recruitment efforts and in-person guidance.}{}
-        \resumeItem
-          {\normalfont Gathered feedback from all players --- of different abilities, physical builds, genders, ethnicities --- to improve the structure of sessions, rules around playing the game, as well as social events off the pitch.}{}
-      \resumeItemListEnd
-    \resumeSubheadingTwo
-      {COVID-19 safety officer}{Jul. 2020 - Aug. 2021}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Formulated risk assessments (including COVID-19 related risks) and helped ensure that both society-enforced and national rules regarding social distancing and sanitizing sports equipment were being followed.}{}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-      {Peer-assisted study sessions (part of Peer Support Scheme at UoM)}{Manchester, UK}
-      {PASS leader}{Sep. 2019 -- Jun. 2020}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Helped create a relaxed, informal learning environment for a group of 10 first-year students.}{}
-        \resumeItem
-          {\normalfont Facilitated critical thinking on topics related to curriculum and beyond by engaging students' interests.}{}
-        \resumeItem
-          {\normalfont Created a safe space for advice on personal as well as university-related problems.}{}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-      {English Wikipedia}{}
-      {Volunteer editor}{Nov. 2016 -- Present}
-      \resumeItemListStart
-        \resumeItem
-          {\normalfont Helped clean-up existing articles -- reverting vandalism, removing copyrighted content, proof-reading and fact-checking them. Restructured and expanded old articles by digging through online and offline resources on several occasions.}{}
-        \resumeItem
-          {\normalfont Gained experience working collaboratively on specific issues with people online, as well as guiding new editors through the website policies and guidelines. Also gained experience in dispute resolution between editors through consensus building and diplomatic discussions. }{}
-        \resumeItem
-          {\normalfont Reviewed new articles and edits to high-profile pages for approval.}{}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-%-------------------------------------------
 \end{document}
