@@ -3,17 +3,21 @@
 \usepackage[margin=1.5cm]{geometry}
 \usepackage{natbib}
 \usepackage{amssymb, amsmath}
-\usepackage[colorlinks=True]{hyperref}
-\hypersetup{urlcolor=blue}
-\usepackage{array}
-\usepackage{fontawesome}
-\usepackage{comment}
+\usepackage{xcolor}
+
+\usepackage[colorlinks=True,urlcolor=blue]{hyperref}
+\usepackage{array} % for defining new column types
+\usepackage{fontawesome} % for icons
+\usepackage{comment} % for commenting out sections
+\usepackage{titlesec} % for custom section titles
 
 % Define new column types for the tables
-\newcolumntype{L}{>{\raggedleft}p{0.18\textwidth}}
-\newcolumntype{R}{p{0.76\textwidth}}
-\newcolumntype{l}{>{\raggedleft}p{0.25\textwidth}}
-\newcolumntype{r}{p{0.71\textwidth}}
+\newcolumntype{L}{>{\raggedleft}p{0.175\textwidth}}
+\newcolumntype{R}{p{0.765\textwidth}}
+
+% Custom section titles
+\titleformat{\section}{\Large\bfseries}{\thesection}{}{}[{\titlerule[0.5pt]}]
+\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{}{}
 
 \begin{document}
 
@@ -23,25 +27,26 @@
 \huge
 \textbf{Jiten Dhandha} \\
 \normalsize
-PhD student - University of Cambridge
+PhD student - University of Cambridge \\
 \end{center}
 
 \begin{minipage}[ht]{0.6\linewidth}
 	\faEnvelope~~\textbf{Email}: jvd29@cam.ac.uk / jitendhandha@gmail.com\\
 	\faGithub~~\textbf{Github:} \href{https://github.com/JitenDhandha}{github.com/JitenDhandha}\\
 	\faGlobe~~\textbf{Website:} \href{https://jitendhandha.com}{jitendhandha.com} \\
-  \faPhone~~\textbf{Mobile}: +44(0)7442793684 \\
+  \faPhone~~\textbf{Mobile:} +44(0)7442793684 \\
 \end{minipage}
-\begin{minipage}[ht]{0.3\linewidth}
+\begin{minipage}[ht]{0.34\linewidth}
 	\begin{flushright}
     \textbf{ORCID:} \href{https://orcid.org/0000-0002-1481-0907}{0000-0002-1481-0907} \\
     \textbf{arXiv:} \href{https://arxiv.org/a/dhandha_j_1.html}{dhandha\_j\_1} \\
     \textbf{Google Scholar:} \href{https://scholar.google.com/citations?user=RjlmcA0AAAAJ}{Jiten Dhandha} \\
-    \textbf{NASA/ADS:} \href{https://ui.adsabs.harvard.edu/search/?q=author%3A%22Dhandha%2C+Jiten%22}{Jiten Dhandha}
+    \textbf{NASA/ADS:} \href{https://ui.adsabs.harvard.edu/search/?q=author%3A%22Dhandha%2C+Jiten%22}{Jiten Dhandha} \\
 	\end{flushright}
 \end{minipage}
 
 \section*{Employment}
+
 \begin{tabular}{L!{\vrule}R}
     Jun. 2021 - Aug. 2021 & \textbf{Summer research project}, University of Manchester. Modelling the cosmological 21-cm signal in \href{https://bitbucket.org/Jacetoto/recfast-.vx/src/Recfast_JD_21cm_modelling/}{\texttt{Recfast++}} and \texttt{CosmoTherm} to study their synergy with CMB spectral distortions. Supervised by Prof. Jens Chluba. \\
     Jun. 2020 - Sep. 2020 & \textbf{Summer research project}, University of Manchester. Testing and debugging \texttt{LOFAR-VLBI} calibration/imaging pipeline for gravitational lenses. Supervised by Dr. Neal Jackson.\\
@@ -50,14 +55,14 @@ PhD student - University of Cambridge
 
 \section*{Education}
 \begin{tabular}{L!{\vrule}R}
-	2022 - \textit{present} & \textbf{PhD in Astronomy}, Institute of Astronomy, University of Cambridge. Supervised by Prof. Anastasia Fialkov and Dr. Eloy de Lera Acedo. \\
-	2018 - 2022 & \textbf{MPhys. Physics with Astrophysics, First Class}, University of Manchester. Project involved simulating turbulent molecular clouds in ISM and studying filament and star formation. Performed with Zoe Faes and supervised by Dr. Rowan Smith. \\
+	2022 - \textit{present} & \textbf{PhD in Astronomy}, Institute of Astronomy, University of Cambridge. Funded by \href{https://boustany-foundation.org/scholarship-programmes/astronomy-phd-cambridge/}{Boustany Astronomy Scholarship} \& \href{https://www.cambridgetrust.org/}{Isaac Newton Studentship}. Supervised by Prof. Anastasia Fialkov and Dr. Eloy de Lera Acedo. \\
+	2018 - 2022 & \textbf{MPhys. Physics with Astrophysics} First Class, University of Manchester. Project involved simulating turbulent molecular clouds in ISM and studying filament and star formation. Performed with Zoe Faes and supervised by Dr. Rowan Smith. \\
 	2016 - 2018 & \textbf{All India Senior School Certificate Examination}, DPS - Modern Indian School, Doha, Qatar. Average of 95.2\% in AISSCE (A-level equivalent) examination.
 \end{tabular}
 
 \section*{Publications}
 
-\subsubsection*{First Author}
+\subsection*{First Author}
 
 \begin{tabular}{L!{\vrule}R}
 
@@ -65,7 +70,7 @@ PhD student - University of Cambridge
 
 \end{tabular}
 
-\subsubsection*{Contributing Author}
+\subsection*{Contributing Author}
 
 \begin{tabular}{L!{\vrule}R}
 
@@ -80,7 +85,7 @@ PhD student - University of Cambridge
 \end{tabular}
 
 \section*{Talks}
-\subsubsection*{Conference and Workshop talks}
+\subsection*{Conference and Workshop talks}
 \begin{tabular}{L!{\vrule}R}
 
     February 2024 & \textit{Synergies between 21-cm experiments and JWST observations}, Science with the 21-cm line, KICC, University of Cambridge. \\
@@ -93,10 +98,10 @@ PhD student - University of Cambridge
 
 \end{tabular}
 
-\subsubsection*{Outreach talks}
+\subsection*{Outreach talks}
 \begin{tabular}{L!{\vrule}R}
 
-  October 2022 & \textit{Like beads on a string... Where do massive stars in our Universe come from? A brief look into studying our cosmos}, Pembroke Papers, Pembroke College, University of Cambridge. \\
+  October 2022 & \textit{Like beads on a string\ldots Where do massive stars in our Universe come from? A brief look into studying our cosmos}, Pembroke Papers, Pembroke College, University of Cambridge. \\
 
 \end{tabular}
 
@@ -104,6 +109,7 @@ PhD student - University of Cambridge
 
 \begin{tabular}{L!{\vrule}R}
 
+    April 2024 & \textbf{DiRAC Resource Allocation Committee 16th Call}, awarded 4.15M CPUh (worth £41,500) on DiRAC's COSMA-8 supercomputer. \\
     July 2022 & \textbf{Tessella Prize for Software} (£125), for outstanding work implementing software in Mphys project. \\
     April 2019 & \textbf{BP Achievement Award} (£1000), for best essay on petrophysical logging tools. \\
     December 2018 & \textbf{Physics Success Scholarship} (£2000), for academic excellence in physics and maths.\\
@@ -146,7 +152,7 @@ PhD student - University of Cambridge
 
 \begin{tabular}{L!{\vrule}R}
 	August 2021 & \href{https://www.astron.nl/most-detailed-ever-images-of-galaxies-revealed-using-lofar }{Most detailed-ever images of galaxies revealed using LOFAR}. Press release for LOFAR observations from ASTRON. \\
-	August 2021 & \href{https://www.bbc.co.uk/news/science-environment-57998940}{Astronomers develop novel way to ‘see’ first stars through fog of early Universe}. Press release for LOFAR observations from BBC. \\
+	August 2021 & \href{https://www.bbc.co.uk/news/science-environment-57998940}{Astronomers develop novel way to `see' first stars through fog of early Universe}. Press release for LOFAR observations from BBC. \\
 \end{tabular}
 
 \section*{Extracurricular activities}
@@ -176,14 +182,5 @@ PhD student - University of Cambridge
 	Markup & \textbf{Experienced}: LaTeX, Wikitext, \textbf{Intermediate}:  HTML, CSS, reStructuredText, Markdown \\
 	Languages & \textbf{Proficient}: English, Hindi, \textbf{Intermediate}: Gujarati
 \end{tabular}
-
-%\section*{References}
-
-%\textbf{Dr Eloy de Lera Acedo}, PhD Supervisor, Head of Cavendish Radio Cosmology and Principle Investigator, Cavendish Astrophysics, University of Cambridge. \textbf{Email:}ed330@cam.ac.uk\\
-%\\
-%\textbf{Dr Will Handley}, PhD Supervisor, Royal Society University Research Fellow, Cavendish Astrophysics, University of Cambridge. \textbf{Email:} wh260@cam.ac.uk\\
-%\\
-%\textbf{Dr Anastasia Fialkov}, PhD Supervisor, Royal Society University Research Fellow, Institute of Astronomy, University of Cambridge. \textbf{Email:} anastasia.fialkov@gmail.com \\
-
 
 \end{document}
