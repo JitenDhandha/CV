@@ -1,2 +1,2 @@
 # CV — Jiten Dhandha
-This is my CV, version-controlled and written in LaTeX. The format is adapted from: [https://github.com/htjb/CV](https://github.com/htjb/CV).
+This is my version-controlled CV, written in LaTeX. The format is adapted from: [https://github.com/htjb/CV](https://github.com/htjb/CV). The publications list is automated via Python (using the `pybtex` package) that reads from a BibTeX file.
