@@ -10,6 +10,7 @@
 \usepackage{fontawesome} % for icons
 \usepackage{comment} % for commenting out sections
 \usepackage{titlesec} % for custom section titles
+\usepackage{multicol} % for multiple columns in sections
 
 % Define new column types for the tables
 \newcolumntype{L}{>{\raggedleft}p{0.175\textwidth}}
@@ -36,7 +37,7 @@ PhD student - University of Cambridge \\
 \end{center}
 
 \begin{minipage}[ht]{0.6\linewidth}
-	\faEnvelope~~\textbf{Email}: jvd29@cam.ac.uk / jitendhandha@gmail.com\\
+	\faEnvelope~~\textbf{Email}: \href{mailto:jvd29@cam.ac.uk}{jvd29@cam.ac.uk} / \href{mailto:jitendhandha@gmail.com}{jitendhandha@gmail.com} \\
 	\faGithub~~\textbf{Github:} \href{https://github.com/JitenDhandha}{github.com/JitenDhandha}\\
 	\faGlobe~~\textbf{Website:} \href{https://jitendhandha.com}{jitendhandha.com} \\
   \faPhone~~\textbf{Mobile:} +44(0)7442793684 \\
@@ -50,20 +51,36 @@ PhD student - University of Cambridge \\
 	\end{flushright}
 \end{minipage}
 
+\section*{Research Interests}
+\begin{multicols}{2}
+\begin{itemize}
+\item 21-cm cosmology
+\item Population III stars
+\item Cosmic Dawn
+\item Epoch of Reionization
+\item Galaxy formation and evolution
+\item Analytic and semi-numerical modelling
+\item Simulation acceleration
+\item Machine learning 
+\item Bayesian inference
+\item Multi-wavelength synergies
+\end{itemize}
+\end{multicols}
+
+\section*{Education}
+\begin{tabular}{L!{\vrule}R}
+	2022 - \textit{present} & \textbf{PhD in Astronomy}, Institute of Astronomy, University of Cambridge. Funded by \href{https://boustany-foundation.org/scholarship-programmes/astronomy-phd-cambridge/}{Boustany Astronomy Scholarship} \& \href{https://www.cambridgetrust.org/partners/institute-of-astronomy}{Isaac Newton Studentship} at Pembroke College. Supervised by Prof. Anastasia Fialkov and Dr. Eloy de Lera Acedo. \\
+	2018 - 2022 & \textbf{MPhys. Physics with Astrophysics} First Class, University of Manchester. Project involved simulating turbulent molecular clouds in ISM and studying filament and star formation. Performed with Zoe Faes and supervised by Dr. Rowan Smith. \\
+	2016 - 2018 & \textbf{All India Senior School Certificate Examination}, DPS - Modern Indian School, Doha, Qatar. Average of 95.2\% in AISSCE examination.
+\end{tabular}
+
 \section*{Employment}
 
 \begin{tabular}{L!{\vrule}R}
     Jul. 2024 - Aug. 2024 & \textbf{Summer volunteer internship}, Boustany Foundation, Monaco. Partnering with Open Cultural Center, a humanitarian NGO focused on providing teaching, advice and extracurricular activities to asylum-seekers and refugees in the Nea Kavala camp in Greece.  \\
     Jun. 2021 - Aug. 2021 & \textbf{Summer research project}, University of Manchester. Modelling the cosmological 21-cm signal in \href{https://bitbucket.org/Jacetoto/recfast-.vx/src/Recfast_JD_21cm_modelling/}{\texttt{Recfast++}} and \texttt{CosmoTherm} to study their synergy with CMB spectral distortions. Supervised by Prof. Jens Chluba. \\
     Jun. 2020 - Sep. 2020 & \textbf{Summer research project}, University of Manchester. Testing and debugging \texttt{LOFAR-VLBI} calibration/imaging pipeline for gravitational lenses. Supervised by Dr. Neal Jackson.\\
-    Jul. 2019 - Sep. 2019 & \textbf{Summer Intern Programme}, British Petroleum / University of Manchester. Simulating mitigation techniques for sulphate reducing bacteria responsible for fouling crude oil. Supervised by Dr. Thomas Waigh. \\
-\end{tabular}
-
-\section*{Education}
-\begin{tabular}{L!{\vrule}R}
-	2022 - \textit{present} & \textbf{PhD in Astronomy}, Institute of Astronomy, University of Cambridge. Funded by \href{https://boustany-foundation.org/scholarship-programmes/astronomy-phd-cambridge/}{Boustany Astronomy Scholarship} \& \href{https://www.cambridgetrust.org/}{Isaac Newton Studentship} at Pembroke College. Supervised by Prof. Anastasia Fialkov and Dr. Eloy de Lera Acedo. \\
-	2018 - 2022 & \textbf{MPhys. Physics with Astrophysics} First Class, University of Manchester. Project involved simulating turbulent molecular clouds in ISM and studying filament and star formation. Performed with Zoe Faes and supervised by Dr. Rowan Smith. \\
-	2016 - 2018 & \textbf{All India Senior School Certificate Examination}, DPS - Modern Indian School, Doha, Qatar. Average of 95.2\% in AISSCE (A-level equivalent) examination.
+    Jul. 2019 - Sep. 2019 & \textbf{Summer intern programme}, British Petroleum / University of Manchester. Simulating mitigation techniques for sulphate reducing bacteria responsible for fouling crude oil. Supervised by Dr. Thomas Waigh. \\
 \end{tabular}
 
 \section*{Publications}
@@ -72,6 +89,11 @@ PhD student - University of Cambridge \\
 
 \begin{tabular}{L!{\vrule}R}
 % Start of first author papers 
+    March 2025 &
+    \textbf{J. Dhandha}, T. Gessey-Jones, H. T. J. Bevins, S. Pochinda, A. Fialkov, S. Tacchella, E. de Lera Acedo, S. Singh, R. Barkana
+    \href{https://ui.adsabs.harvard.edu/abs/2025arXiv250321687D}{\textit{Exploiting synergies between JWST and cosmic 21-cm observations to uncover star formation in the early Universe}},
+    arXiv e-prints, arXiv:2503.21687 \\
+
     April 2024 &
     \textbf{J. Dhandha}, Z. Faes, R. J. Smith
     \href{https://ui.adsabs.harvard.edu/abs/2024MNRAS.529.4699D}{\textit{Decaying turbulence in molecular clouds: how does it affect filament networks and star formation?}},
@@ -83,20 +105,40 @@ PhD student - University of Cambridge \\
 
 \begin{tabular}{L!{\vrule}R}
 % Start of contributing author papers 
-    December 2024 &
+    August 2025 &
+    B. Liu, D. Kessler, T. Gessey-Jones, \textbf{J. Dhandha}, A. Fialkov, Y. Sibony, G. Meynet, V. Bromm, R. Barkana
+    \href{https://ui.adsabs.harvard.edu/abs/2025MNRAS.541.3113L}{\textit{Effects of chemically homogeneous evolution of the first stars on the 21-cm signal and reionization}},
+    Monthly Notices of the Royal Astronomical Society, 541, 3113-3133 \\
+
+    July 2025 &
+    J. Wasserman, E. Zackrisson, \textbf{J. Dhandha}, A. Fialkov, L. Noble, S. Majumdar
+    \href{https://ui.adsabs.harvard.edu/abs/2025arXiv250721764W}{\textit{Ultraviolet photon production rates of the first stars: Impact on the He II $\lambda 1640 \r{A}$ emission line from primordial star clusters and the 21-cm signal from cosmic dawn}},
+    arXiv e-prints, arXiv:2507.21764 \\
+
+    July 2025 &
+    S. Munshi, F. G. Mertens, J. K. Chege, L. V. E. Koopmans, A. R. Offringa, B. Semelin, R. Barkana, \textbf{J. Dhandha}, A. Fialkov, R. M\'eriot, S. Sikder, A. Bracco, S. A. Brackenhoff, E. Ceccotti, R. Ghara, S. Ghosh, I. Hothi, M. Mevius, P. Ocvirk, A. K. Shaw, S. Yatawatta, P. Zarka
+    \href{https://ui.adsabs.harvard.edu/abs/2025arXiv250710533M}{\textit{Improved upper limits on the 21-cm signal power spectrum at $z=17.0$ and $z=20.3$ from an optimal field observed with NenuFAR}},
+    arXiv e-prints, arXiv:2507.10533 \\
+
+    March 2025 &
     O. S. D. O'Hara, Q. Gueuning, E. de Lera Acedo, F. Dulwich, J. Cumner, D. Anstey, A. Brown, A. Fialkov, \textbf{J. Dhandha}, A. Faulkner, Y. Liu
-    \href{https://ui.adsabs.harvard.edu/abs/2024arXiv241201699O}{\textit{Uncovering the Effects of Array Mutual Coupling in 21-cm Experiments with the SKA-Low Radio Telescope}},
-    arXiv e-prints, arXiv:2412.01699 \\
+    \href{https://ui.adsabs.harvard.edu/abs/2025MNRAS.538...31O}{\textit{Uncovering the effects of array mutual coupling in 21-cm experiments with the SKA-Low radio telescope}},
+    Monthly Notices of the Royal Astronomical Society, 538, 31-48 \\
+
+    February 2025 &
+    S. Pochinda, \textbf{J. Dhandha}, A. Fialkov, E. de Lera Acedo
+    \href{https://ui.adsabs.harvard.edu/abs/2025arXiv250200852P}{\textit{Cosmological super-resolution of the 21-cm signal}},
+    arXiv e-prints, arXiv:2502.00852 \\
 
     September 2024 &
     O. S. D. O'Hara, F. Dulwich, E. de Lera Acedo, \textbf{J. Dhandha}, T. Gessey-Jones, D. Anstey, A. Fialkov
     \href{https://ui.adsabs.harvard.edu/abs/2024MNRAS.533.2876O}{\textit{Understanding spectral artefacts in SKA-Low 21-cm cosmology experiments: the impact of cable reflections}},
     Monthly Notices of the Royal Astronomical Society, 533, 2876-2892 \\
 
-    November 2023 &
+    May 2024 &
     A. Fialkov, T. Gessey-Jones, \textbf{J. Dhandha}
-    \href{https://ui.adsabs.harvard.edu/abs/2023arXiv231105366F}{\textit{Cosmic mysteries and the hydrogen 21-cm line: bridging the gap with lunar observations}},
-    arXiv e-prints, arXiv:2311.05366 \\
+    \href{https://ui.adsabs.harvard.edu/abs/2024RSPTA.38230068F}{\textit{Cosmic mysteries and the hydrogen 21-cm line: bridging the gap with lunar observations}},
+    Philosophical Transactions of the Royal Society of London Series A, 382, 20230068 \\
 
     December 2022 &
     S. K. Acharya, \textbf{J. Dhandha}, J. Chluba
@@ -113,6 +155,8 @@ PhD student - University of Cambridge \\
 \section*{Talks}
 \subsection*{Conference and Workshop talks}
 \begin{tabular}{L!{\vrule}R}
+
+    June 2025 & \textit{Exploiting synergies between JWST and cosmic 21-cm observations to uncover star formation in the early Universe}, SKAO General Science Meeting 2025, Görlitz, Germany. \\
 
     October 2024 & \textit{Constraining star-formation efficiency in the early Universe using JWST and the cosmic 21-cm signal}, Introduction to KICC, Kavli Institute for Cosmology, Cambridge. \\
 
@@ -161,17 +205,21 @@ PhD student - University of Cambridge \\
 \section*{Conference organisation}
 
 \begin{tabular}{L!{\vrule}R}
-  February 2024  &\href{https://www.kicc.cam.ac.uk/events/kavli-science-themed-meetings/science-21-cm-hydrogen-line}{Kavli Science Focus: Science with the 21-cm line}, member of Organising Committee and session chair, KICC, University of Cambrdige. \\
+
+  July 2025  & One day workshop: Radio cosmology and science with the 21-cm signal, member of Organising Committee and session chair, KICC, University of Cambridge. \\
+
+  February 2024 & \href{https://www.kicc.cam.ac.uk/events/kavli-science-themed-meetings/science-21-cm-hydrogen-line}{Kavli Science Focus: Science with the 21-cm line}, member of Organising Committee and session chair, KICC, University of Cambridge. \\
 \end{tabular}
+
 \section*{Teaching responsibilities}
 
 \begin{tabular}{L!{\vrule}R}
 
-	Oct. 2024 - \textit{present} & \textbf{Co-Supervision: Kyle Wong} (Masters student) with Prof. Anastasia Fialkov.  Working on studying the impact of structure formation and cosmology on the hydrogen 21-cm signal from Cosmic Dawn. \\
+	Oct. 2024 - \textit{present} & \textbf{Co-Supervision: Jacques Valkenberg} (MPhil. student) with Prof. Anastasia Fialkov and Dr. Sandro Tacchella. Work on studying the impact of metal enrichment and Population~II stellar IMF on the 21-cm signal of neutral hydrogen. \\
 
-	Oct. 2024 - \textit{present} & \textbf{Co-Supervision: Jacques Valkenberg} (Masters student) with Prof. Anastasia Fialkov and Dr. Sandro Tacchella. Working on studying the impact of metal enrichment and stellar IMF on the 21-cm signal of neutral hydrogen. \\
+	Oct. 2024 - \textit{present} & \textbf{Co-Supervision: Kyle Wong} (Part~III student) with Prof. Anastasia Fialkov. Work on studying the impact of varying cosmology and matter power spectrum on the 21-cm signal of neutral hydrogen. \\
 
-	Oct. 2023 - \textit{Jul. 2024} & \textbf{Co-Supervision: Rachel Incley} (Masters student) with Prof. Anastasia Fialkov. Working on comparison of Epoch of Reionization in simulation codes \texttt{21cmSPACE} and \texttt{C2-Ray}. \\
+	Oct. 2023 - \textit{Jul. 2024} & \textbf{Co-Supervision: Rachel Incley} (Part~III student) with Prof. Anastasia Fialkov. Work on comparison of Epoch of Reionization in simulation codes \texttt{21cmSPACE} and \texttt{C2-Ray}. \\
 
   Feb. 2023 - Mar. 2023 & \textbf{Demonstration of Part IA Scientific Computing} for 22 hours, University of Cambridge.\\
 
@@ -195,6 +243,8 @@ PhD student - University of Cambridge \\
 
 \section*{Extracurricular activities}
 \begin{tabular}{L!{\vrule}R}
+
+  Feb. 2025 - Mar. 2025 & \textbf{International Womens Day Committee} member, Institute of Astronomy, UoC. \\
 
   May 2023 - \textit{present} & \textbf{EDI Inclusion and Fairness} subgroup member, Institute of Astronomy, UoC. \\
 

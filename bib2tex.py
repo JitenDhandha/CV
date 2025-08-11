@@ -80,6 +80,13 @@ def main():
     bib_file_path = sys.argv[1]
     bib_data = parse_file(bib_file_path)
     titles, authors, months, years, journals, volumes, pages, links = parse_bib_data(bib_data)
+    
+    # Remove \textbackslash from the authors
+    for i in range(len(authors)):
+        authors[i] = [author.replace("\\textbackslash", "") for author in authors[i]]
+    # Some custom processing for titles
+    for i in range(len(titles)):
+        titles[i] = titles[i].replace(r"$λ$ 1640 \rA", "$\\lambda 1640 \\r{A}$")
 
     # Load the tex file
     doc = sys.argv[2]
