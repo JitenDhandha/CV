@@ -95,7 +95,9 @@ def main():
     
     # Empty strings to store the tex data
     first_author_text = ""
+    first_author_counter = 0
     contrib_author_text = ""
+    contrib_author_counter = 0
 
     # Convert the bib data to tex
     for i in range(len(titles)):
@@ -111,16 +113,23 @@ f"""
         paper_text = paper_text.replace(", ,", ",")
         if authors[i][0] == "J. Dhandha":
             first_author_text += paper_text
+            first_author_counter += 1
         else:
             contrib_author_text += paper_text
+            contrib_author_counter += 1
         
     # Find the correct location to insert the text and write the file
     with open(doc,"w") as f:
+        paper_counter_star_idx = all_text.find("% Start of paper counter")
+        paper_counter_end_idx = all_text.find("% End of paper counter")
         fa_start_idx = all_text.find("% Start of first author papers")
         fa_end_idx = all_text.find("% End of first author papers")
         ca_start_idx = all_text.find("% Start of contributing author papers")
         ca_end_idx = all_text.find("% End of contributing author papers")
-        all_text = all_text[:fa_start_idx] + \
+        all_text = all_text[:paper_counter_star_idx] + \
+                    "% Start of paper counter " + \
+                   f"\nI have \\textbf{{{first_author_counter} first author}} publications and \\textbf{{{contrib_author_counter} contributing author}} publications.\n" + \
+                   all_text[paper_counter_end_idx:fa_start_idx] + \
                    "% Start of first author papers " + first_author_text + \
                     all_text[fa_end_idx:ca_start_idx] + \
                     "% Start of contributing author papers " + contrib_author_text + \
