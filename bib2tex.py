@@ -28,11 +28,16 @@ def parse_bib_data(bib_data):
         
         author = strip_braces(entry.persons['author']) # Strip braces
         for i in range(len(author)):
+            # Check if there is a comma in the name and split accordingly
             a = author[i]
-            a_split = a.split(",")
-            first_name = a_split[1].strip()
-            last_name = a_split[0].strip()
-            first_name = " ".join([f"{x[0]}." for x in first_name.split(" ")]) # Convert first name to initials
+            if "," not in a:
+                first_name = a
+                last_name = ""
+            else:
+                a_split = a.split(",")
+                first_name = a_split[1].strip()
+                last_name = a_split[0].strip()
+                first_name = " ".join([f"{x[0]}." for x in first_name.split(" ")]) 
             author[i] = f"{first_name} {last_name}" # Swap first and last name
         authors.append(author)
         
@@ -101,8 +106,15 @@ def main():
 
     # Convert the bib data to tex
     for i in range(len(titles)):
-        author_tex = ", ".join(authors[i])
-        author_tex = author_tex.replace("J. Dhandha", "\\textbf{J. Dhandha}")
+        
+        # Handle long author lists
+        if len(authors[i]) > 25:
+            author_tex = authors[i][0] + " et al."
+        else:
+            author_tex = ", ".join(authors[i])
+            author_tex = author_tex.replace("J. Dhandha", "\\textbf{J. Dhandha}")
+            
+        # Create the paper text
         paper_text = \
 f"""
     {months[i]} {years[i]} &
@@ -111,6 +123,8 @@ f"""
     {journals[i]}, {volumes[i]}, {pages[i]} \\\\
 """
         paper_text = paper_text.replace(", ,", ",")
+        
+        # Append to the correct string
         if authors[i][0] == "J. Dhandha":
             first_author_text += paper_text
             first_author_counter += 1
