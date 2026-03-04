@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Pre-commit hook: update CV.tex from publications.bib
+
+# Activate pyenv environment
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+pyenv activate standard
+
+# Only run if publications.bib, bib2tex.py, or CV.tex are staged
+if git diff --cached --name-only | grep -qE '(publications\.bib|bib2tex\.py|CV\.tex)'; then
+    echo "Running bib2tex.py to update publications in CV.tex..."
+    python bib2tex.py publications.bib CV.tex
+    if [ $? -ne 0 ]; then
+        echo "Error: bib2tex.py failed. Commit aborted."
+        exit 1
+    fi
+    echo "Compiling CV.tex..."
+    pdflatex -interaction=nonstopmode CV.tex > /dev/null 2>&1
+    pdflatex -interaction=nonstopmode CV.tex > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+        echo "Error: pdflatex failed. Commit aborted."
+        exit 1
+    fi
+    git add CV.tex CV.pdf
+fi
