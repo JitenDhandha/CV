@@ -91,7 +91,7 @@ def main():
         authors[i] = [author.replace("\\textbackslash", "") for author in authors[i]]
     # Some custom processing for titles
     for i in range(len(titles)):
-        titles[i] = titles[i].replace(r"$λ$ 1640 \rA", "$\\lambda 1640 \\r{A}$")
+        titles[i] = titles[i].replace(r"\ensuremath\lambda 1640 \rA", "$\\lambda 1640 \\r{A}$")
 
     # Load the tex file
     doc = sys.argv[2]
