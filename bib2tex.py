@@ -74,6 +74,9 @@ def parse_bib_data(bib_data):
     
     return titles, authors, months, years, journals, volumes, pages, links
 
+def find_index_with_substring(list_of_strings, substring):
+    return next(i for i, s in enumerate(list_of_strings) if substring in s)
+
 def main():
     
     # Check the number of arguments
@@ -86,12 +89,23 @@ def main():
     bib_data = parse_file(bib_file_path)
     titles, authors, months, years, journals, volumes, pages, links = parse_bib_data(bib_data)
     
-    # Remove \textbackslash from the authors
+    # CUSTOM PROCESSING
+    
     for i in range(len(authors)):
+        # Remove \textbackslash from the authors
         authors[i] = [author.replace("\\textbackslash", "") for author in authors[i]]
-    # Some custom processing for titles
-    for i in range(len(titles)):
-        titles[i] = titles[i].replace(r"\ensuremath\lambda 1640 \rA", "$\\lambda 1640 \\r{A}$")
+        # Fix {Acedo}, Eloy de Lera to "{de Lera Acedo}, Eloy"
+        try:
+            idx = find_index_with_substring(authors[i], "Acedo")
+            authors[i][idx] = "E. de Lera Acedo"
+        except StopIteration:
+            pass
+    # Find and fix for 2026MNRAS.547ag386W
+    idx = find_index_with_substring(links, "2026MNRAS.547ag386W")
+    titles[idx] = titles[idx].replace(r"\ensuremath\lambda 1640 \rA", "$\\lambda 1640 \\r{A}$")
+    # Find and fix for 2025arXiv250200852P
+    idx = find_index_with_substring(links, "2025arXiv250200852P")
+    journals[idx] = "Accepted at NeurIPS 2024 (Machine Learning and the Physical Sciences Workshop)"
 
     # Load the tex file
     doc = sys.argv[2]
