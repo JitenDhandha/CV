@@ -35,9 +35,12 @@ jobs:
           ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
 
       - name: Install TeX Live
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-full
+        uses: zauguin/install-texlive@v4
+        with:
+          packages: >
+            latex latex-bin natbib amsmath xcolor hyperref
+            array fontawesome comment titlesec longtable siunitx
+            geometry inputenc
 
       - name: Compile LaTeX
         run: |
