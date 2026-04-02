@@ -34,7 +34,13 @@ jobs:
         env:
           ADS_DEV_KEY: ${{ secrets.ADS_DEV_KEY }}
 
+      - name: Check if CV.tex changed
+        id: check_changes
+        run: |
+          git diff --quiet CV.tex || echo "changed=true" >> $GITHUB_OUTPUT
+
       - name: Install TeX Live
+        if: steps.check_changes.outputs.changed == 'true'
         uses: zauguin/install-texlive@v4
         with:
           packages: >
@@ -42,11 +48,13 @@ jobs:
             fontawesome comment titlesec siunitx
 
       - name: Compile LaTeX
+        if: steps.check_changes.outputs.changed == 'true'
         run: |
           pdflatex CV.tex
           pdflatex CV.tex
 
       - name: Commit and push all changes
+        if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
