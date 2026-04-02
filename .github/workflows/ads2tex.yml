@@ -38,9 +38,8 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: >
-            latex latex-bin natbib amsmath xcolor hyperref
-            array fontawesome comment titlesec longtable siunitx
-            geometry inputenc
+            collection-latex collection-latexrecommended
+            fontawesome comment titlesec siunitx
 
       - name: Compile LaTeX
         run: |
