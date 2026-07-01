@@ -36,9 +36,12 @@ def main():
         # Some custom processing
         # Fix "Acedo, Eloy de Lera" to "de Lera Acedo, Eloy"
         paper.author = ["de Lera Acedo, Eloy" if "Acedo" in author else author for author in paper.author]
-        # Fix publication for 2025arXiv250200852P
+        # Fix publisher for 2025arXiv250200852P
         if paper.bibcode == "2025arXiv250200852P":
             paper.pub = "Accepted at NeurIPS 2024 (Machine Learning and the Physical Sciences Workshop)"
+        # Ignore SKA chapter (2026arXiv260630947C)
+        if paper.bibcode == "2026arXiv260630947C":
+            continue
         # Common fixes
         math_dict = {"λ": "$\\lambda$", "μ": "$\\mu$", "α": "$\\alpha$", "β": "$\\beta$"}
         for key, value in math_dict.items():
