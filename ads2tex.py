@@ -48,9 +48,11 @@ def main():
             paper.title[0] = paper.title[0].replace(key, value)
         
         # Process the month and year to convert "YYYY-MM-DD" to "Month YYYY"
-        date = datetime.datetime.strptime(paper.pubdate.replace("-00",""), "%Y-%m")
-        # Generate the date TeX string
-        date_tex = date.strftime("%B %Y")
+        year, month, _ = paper.pubdate.split("-")
+        if month == "00":
+            date_tex = f"--- {year}"
+        else:
+            date_tex = datetime.datetime.strptime(f"{year}-{month}", "%Y-%m").strftime("%B %Y")
         
         # Process the authors to convert "Dhandha, Jiten" to "J. Dhandha"
         authors = []
