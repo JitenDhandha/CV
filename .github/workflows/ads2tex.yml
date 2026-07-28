@@ -45,7 +45,7 @@ jobs:
         with:
           packages: >
             collection-latex collection-latexrecommended
-            fontawesome comment titlesec siunitx
+            fontawesome comment titlesec siunitx needspace
 
       - name: Compile LaTeX
         if: steps.check_changes.outputs.changed == 'true'
