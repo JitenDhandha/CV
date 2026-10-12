@@ -110,7 +110,7 @@ f"""
         ca_end_idx = all_text.find("% End of contributing author papers")
         all_text = all_text[:paper_counter_star_idx] + \
                     "% Start of paper counter " + \
-                   f"\nI have \\textbf{{{first_author_counter} first author}} publications and \\textbf{{{contrib_author_counter} contributing author}} publications.\n" + \
+                   f"\nI have \\textbf{{{first_author_counter} first author}} publications and \\textbf{{{contrib_author_counter} contributing author}} publications. I have also contributed by peer-reviewing \\textbf{{1}} paper.\n" + \
                    all_text[paper_counter_end_idx:fa_start_idx] + \
                    "% Start of first author papers " + first_author_tex + \
                     all_text[fa_end_idx:ca_start_idx] + \
