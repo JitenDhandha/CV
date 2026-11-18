@@ -9,7 +9,7 @@
 \usepackage{array} % for defining new column types
 \usepackage{fontawesome} % for icons
 \usepackage{comment} % for commenting out sections
-\usepackage{titlesec} % for custom section titles
+\usepackage[nobottomtitles*]{titlesec} % for custom section titles, and moving the titles near the bottom to next page
 \usepackage{needspace} % for non-breaking titles and their content
 \usepackage{longtable} % for long tables that span multiple pages
 \usepackage{siunitx} % for SI units
@@ -20,7 +20,10 @@
 
 % Custom section titles
 \titleformat{\section}{\Large\bfseries}{\thesection}{}{}[{\titlerule[0.5pt]}]
-\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{}{}
+
+% How close to the page bottom counts as "too close"
+\renewcommand{\bottomtitlespace}{0.15\textheight} 
 
 \begin{document}
 
@@ -120,7 +123,7 @@ My research focuses on the study of the early Universe, spanning the \textbf{Dar
 
 \begin{longtable}{L!{\vrule}R}
 
-  March 2026 - \textit{present} & 21-cm Meeting Series, co-organiser of bi-weekly meetings at KICC, University of Cambridge, focused on the cosmological 21-cm signal and related topics. \\
+  Mar. 2026 - Apr. 2026 & 21-cm Meeting Series, co-organiser of bi-weekly meetings at KICC, University of Cambridge, focused on the cosmological 21-cm signal and related topics. \\
 
   May 2026 & \href{https://www.kicc.cam.ac.uk/events/kavli-science-themed-meetings/galaxies-and-21-cm-frontier}{Galaxies and the 21-cm Frontier: Unveiling the Epoch of Reionization} (Kavli Science Focus), member of Organising Committee and session chair, KICC, University of Cambridge. \\
 
@@ -205,6 +208,8 @@ My research focuses on the study of the early Universe, spanning the \textbf{Dar
 
 \subsection*{Meeting talks}
 \begin{longtable}{L!{\vrule}R}
+
+    November 2026 & \textit{What do we know about the cosmic 21-cm signal so far, and how can we improve upon it?}, UTAP meeting, Department of Physics, University of Tokyo. \\
 
     October 2026 & \textit{What do we know about the cosmic 21-cm signal so far, and how can we improve upon it?}, Astro seminar, Kavli Institute for Physics and Mathematics of the Universe, University of Tokyo. \\
 
